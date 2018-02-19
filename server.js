@@ -7,7 +7,7 @@ const Score = require('./models/score');
 
 const app = express();
 
-const MONGO_URI = db.url;
+const MONGO_URI = db.url || process.env.MONGODB_URI;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
