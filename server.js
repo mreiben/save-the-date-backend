@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const moment = require('moment');
 const bodyParser = require('body-parser');
-import url from './config/db';
+const url = require('./config/db');
 const Score = require('./models/score');
 
 const app = express();
