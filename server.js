@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const moment = require('moment');
 const bodyParser = require('body-parser');
-const db = require('./config/db.js');
+import url from './config/db';
 const Score = require('./models/score');
 
 const app = express();
 
-const MONGO_URI = db.url || process.env.MONGODB_URI;
+const MONGO_URI = url || process.env.MONGODB_URI;
 if (!MONGO_URI) {
   throw new Error('You must provide a MongoLab URI');
 }
