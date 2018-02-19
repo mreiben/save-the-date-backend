@@ -2,10 +2,19 @@
   "name": "save-the-date-backend",
   "version": "1.0.0",
   "description": "A backend project to store scores in mongodb",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
-  "author": "Sarah Rosenshing & Jason Eiben",
-  "license": "ISC"
+  "author": "Sarah Rosenshine & Jason Eiben",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.16.2",
+    "lodash": "^4.17.5",
+    "mongoose": "^5.0.6",
+    "nodemon": "^1.15.1"
+  }
 }
