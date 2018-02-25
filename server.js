@@ -42,6 +42,7 @@ router.route('/scores')
     score.initials = req.body.initials;
     score.date = moment().format('YYYY-MM-DD HH:mm');
     score.player = req.body.player;
+    score.mode = req.body.mode;
 
     // save the score and check for errors
     score.save(function(err) {

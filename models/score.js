@@ -6,7 +6,8 @@ const ScoreSchema = new Schema({
   value: Number,
   date: Date,
   player: String,
-  initials: String
+  initials: String,
+  mode: String
 });
 
 module.exports = mongoose.model('Score', ScoreSchema);
