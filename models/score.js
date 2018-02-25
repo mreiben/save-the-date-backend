@@ -5,7 +5,8 @@ const ScoreSchema = new Schema({
   name: String,
   value: Number,
   date: Date,
-  player: String
+  player: String,
+  initials: String
 });
 
 module.exports = mongoose.model('Score', ScoreSchema);

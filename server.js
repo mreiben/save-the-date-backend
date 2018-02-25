@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const moment = require('moment');
 const bodyParser = require('body-parser');
-// const url = require('./config/db');
 const Score = require('./models/score');
 
 const app = express();
@@ -34,6 +33,7 @@ router.route('/scores')
     let score = new Score();
     score.name = req.body.name;
     score.value = req.body.value;
+    score.initials = req.body.initials;
     score.date = moment().format('YYYY-MM-DD HH:mm');
     score.player = req.body.player;
 
