@@ -39,7 +39,7 @@ router.route('/scores')
     let score = new Score();
     score.name = req.body.name;
     score.value = req.body.value;
-    score.initials = req.body.initials;
+    score.initials = req.body.initials !== "" ? req.body.initials : "Anonymous";
     score.date = moment().format('YYYY-MM-DD HH:mm');
     score.player = req.body.player;
     score.mode = req.body.mode;
